@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Ghosts</title>
+	<style>
+		body {
+			margin: 0px;
+			padding: 0px;
+		}
+	</style>
+	</head>
+	<body data-rsssl=1>
+		<canvas id="myCanvas" width="1500" height="1500"></canvas>
+	<script>
+	function start(){
+		drawGhost(100, 150, 'red');
+		drawGhost(325, 300, 'orange');
+		drawGhost(550, 125, 'pink');
+		drawGhost(100, 650, 'lightblue');
+		drawGhost(550, 675, 'lightgreen');
+	}
+		
+	function drawGhost(centerX, centerY, color){	
+	var canvas = document.getElementById('myCanvas');
+	var context = canvas.getContext('2d');
+	
+	console.log(centerX + centerY + color);
+	
+// body		
+	context.beginPath();
+	context.rect(centerX, centerY, 175, 200);
+	context.fillStyle = color;
+	context.fill();
+	context.lineWidth = 5;
+	context.strokeStyle = color;
+	context.stroke();
+	
+// head
+	context.beginPath();
+	context.arc((centerX + 87), (centerY - 15), 89, 0, 2 * Math.PI, false);
+	context.fillStyle = color;
+	context.fill();
+	context.lineWidth = 3;
+	context.strokeStyle = color;
+	context.stroke();
+	
+// feet	
+	context.beginPath();
+	context.arc((centerX + 24), (centerY + 200), 25, 0, 2 * Math.PI, false);
+	context.fillStyle = color;
+	context.fill();
+	context.lineWidth = 3;
+	context.strokeStyle = color;
+	context.stroke();
+
+	context.beginPath();
+	context.arc((centerX + 87), (centerY + 200), 25, 0, 2 * Math.PI, false);
+	context.fillStyle = color;
+	context.fill();
+	context.lineWidth = 3;
+	context.strokeStyle = color;
+	context.stroke();	
+	
+	context.beginPath();
+	context.arc((centerX + 151), (centerY + 200), 25, 0, 2 * Math.PI, false);
+	context.fillStyle = color;
+	context.fill();
+	context.lineWidth = 3;
+	context.strokeStyle = color;
+	context.stroke();
+	
+// right eye
+	context.beginPath();
+	context.arc((centerX + 127), (centerY - 20), 25, 0, 2 * Math.PI, false);
+	context.fillStyle = 'white';
+	context.fill();
+	context.lineWidth = 3;
+	context.strokeStyle = 'white';
+	context.stroke();
+	
+	context.beginPath();
+	context.arc((centerX + 137), (centerY - 20), 15, 0, 2 * Math.PI, false);
+	context.fillStyle = 'blue';
+	context.fill();
+	context.lineWidth = 3;
+	context.strokeStyle = 'blue';
+	context.stroke();
+	
+// left eye
+	context.beginPath();
+	context.arc((centerX + 42), (centerY - 20), 25, 0, 2 * Math.PI, false);
+	context.fillStyle = 'white';
+	context.fill();
+	context.lineWidth = 3;
+	context.strokeStyle = 'white';
+	context.stroke();
+	
+	context.beginPath();
+	context.arc((centerX + 52), (centerY - 20), 15, 0, 2 * Math.PI, false);
+	context.fillStyle = 'blue';
+	context.fill();
+	context.lineWidth = 3;
+	context.strokeStyle = 'blue';
+	context.stroke();
+	 }
+	  start();
+	</script>
+	</body>
+</html>

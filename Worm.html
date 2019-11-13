@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+Worm: He is worm
+</title>
+    </head>
+    <body>
+<body data-rsssl=1>
+<canvas id="myCanvas" width="1250" height="1250"></canvas>
+<script>
+function start(){
+var canvas = document.getElementById('myCanvas');
+var context = canvas.getContext('2d');
+var centerX = canvas.width / 2;
+var centerY = canvas.height / 2;
+var radius = 70;
+var NUM_CIRCLE = 15;
+for(i=0;i<=NUM_CIRCLE; i++){
+
+context.beginPath();
+context.arc(centerX+(i*50), centerY, radius, 0, 2 * Math.PI, false);
+context.fillStyle = 'brown';
+context.fill();
+context.lineWidth = 5;
+context.strokeStyle = '#003300';
+context.stroke();
+}
+}
+start();
+</script>
+    </body>
+</html>

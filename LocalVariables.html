@@ -1,0 +1,23 @@
+<!DOCTPYE html>
+<html>
+	<head>
+		<title>Local Variables</title>
+	</head>
+	
+	<body>
+	<p>Local Variables are variables that only exist inside of a function. When declaring a variable using the keyword var. you are making it a local variable.</p>
+	<br>
+	<p>An example of a local variable in a function is in the following:
+	<br> function addOne(x){
+	<br> var <b>result</b> = x + 1;
+	<br> return result;
+	<br> }
+	<br>
+	<br>function sum(x, y){
+	<br>	var <b>result</b> = x + y;
+	<br>	return result;
+	<br> }
+	<br>
+	<p>In a function, if there is a local variable in it, no other function should be able to read that variable as long as it is still in the function's brackets, regardless of if they have the same variable name or not. The bolded words in the example function are examples of local variables. Although they share the same variable name, they are in different functions, so they aren't the same.</p>
+	</body>
+</html>

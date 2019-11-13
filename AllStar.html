@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+
+<title>Are you an All Star?</title>
+
+<script>
+	function start(){
+	var firstStat = prompt("How many points did you score?");
+	var secondStat = prompt("How many rebounds did you score?");
+	var thirdStat = prompt("How many assists did you get?");
+	var points = (firstStat >= 25 || firstStat >= 10 && secondStat >= 10 && thirdStat >= 10);
+	document.write("Can be an all star: " + points);
+	}
+start();
+</script>
+</html>
